@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre con Carta</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+        }
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #ff4d6d;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ff99ac;
+        }
+        .envelope::before {
+            content: "💌 De Axel para la niña más hermosa del mundo 💌";
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        .flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ff99ac;
+            clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+            transition: transform 0.5s;
+        }
+        .letter {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            transition: top 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            color: #d6336c;
+            padding: 20px;
+            transform: translateX(-50%);
+        }
+        .letter::before {
+            content: "❤️ Te amo demasiado ❤️";
+        }
+        .envelope:hover .flap {
+            transform: rotateX(180deg);
+        }
+        .envelope:hover .letter {
+            top: 25%;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="andy_lucas_tanto_la_queria_videoclip@nicooponcee (1).mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter"></div>
+    </div>
+</body>
+</html>
